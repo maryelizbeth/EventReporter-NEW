@@ -51,8 +51,8 @@ class EventReporterCLI
       end 
 
     elsif command == "queue"
-      if @queue.valid_parameters_for_queue?(parameters, @queue)
-        @queue.call(parameters, @queue)
+      if Queue.valid_parameters_for_queue?(parameters, command)
+        Queue.call(parameters, command)
       else 
         puts "Sorry, you specified an invalid command for 'queue'."
       end 
@@ -103,5 +103,4 @@ class EventReporterCLI
 end 
 
 #Scripts 
-er = EventReporterCLI.new
-er.run
+EventReporterCLI.run 

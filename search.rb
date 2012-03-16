@@ -29,7 +29,7 @@ class Search
     
     attribute = parameters[0]
     criteria = parameters[1..-1].join " "
-    @queue = EventReporterCLI.queue.queue 
+    @queue = Queue.new
 
     attendees.each do |attendee|
       if attendee.send(attribute.to_sym).downcase == criteria.downcase

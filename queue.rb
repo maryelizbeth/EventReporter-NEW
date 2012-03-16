@@ -9,9 +9,9 @@ class Queue < Array
   attr_accessor :queue
 
   #@attribute = parameters[3]
-  def initialize
-    @queue = []
-  end
+  # def initialize
+  #   @queue = Queue.new.call
+  # end
 
   def call(parameters)
     "Running queue sub-function #{parameters[0]}"
